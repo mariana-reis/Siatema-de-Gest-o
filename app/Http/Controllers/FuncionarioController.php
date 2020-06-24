@@ -75,10 +75,8 @@ class FuncionarioController extends Controller
     }
     public function destroy($id)
     {
-        $funcionario=Funcionario::findOrFail($id);
-        $funcionario->update();
-        return Redirect::to('cadastro/funcionario');
-
+        Funcionario::find($id)->delete();
+        return redirect()->back();
 
     }
 }

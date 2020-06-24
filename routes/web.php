@@ -16,12 +16,20 @@ Route::get('/', function () {
 });
 Auth::routes();
 
+Route::get('pdf_produto', 'PdfController@geraPdf');
+Route::get('pdf_caixa', 'PdfController@caixa');
+Route::get('pdf_cliente', 'PdfController@cliente');
+
+
+
+
+
 //Route::get('erro', function() {
 //    return view('erro');
 //});
 
-Route::group(['middlware' => 'auth' ], function () {
-});
+//Route::group(['middlware' => 'auth' ], function () {
+//});
     Route::group(['prefix' => 'editar'], function() {
         Route::get('', 				'CaixaController@editIndex');
         Route::put('{id}', 			'CaixaController@update');
@@ -57,10 +65,17 @@ Route::group(['middlware' => 'auth' ], function () {
 Route::resource('cadastro/cliente','ClienteController');
 Route::resource('cadastro/fornecedor','FornecedorController');
 Route::resource('cadastro/produto','ProdutoController');
-Route::post('cadastro/produto/{id}/delete', 'ProdutoController@destroy');
+
+Route::DELETE('cadastro/produto/{id}', 'ProdutoController@destroy');
+Route::DELETE('cadastro/cliente/{id}', 'ClienteController@destroy');
+Route::DELETE('cadastro/funcionario/{id}', 'FuncionarioController@destroy');
+Route::DELETE('cadastro/fornecedor/{id}', 'FornecedorController@destroy');
+Route::DELETE('acesso/usuario/{id}', 'UsuariosController@destroy');
+
 //Route::post('{id}/edit', 	'ProdutoController@update');
 
 Route::post('cadastro/produto/{id}/edit', 'ProdutoController@update');
+
 Route::post('cadastro/cliente/{id}/edit','ClienteController@update');
 Route::post('cadastro/fornecedor/{id}/edit','FornecedorController@update');
 Route::post('acesso/usuario/{id}/edit','UsuariosController@update');

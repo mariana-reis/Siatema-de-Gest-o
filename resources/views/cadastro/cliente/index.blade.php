@@ -38,7 +38,7 @@
 
                             <td>
                                 <a href="{{URL::action('ClienteController@edit',$cli->id_clientes)}}"><button class="btn btn-info">Editar</button></a>
-                                <a href="" data-target="#modal=delete-{{$cli->id_clientes}}" data-toggle="modal"> <button class="btn btn-danger">Excluir</button></a>
+                                <a href="" data-target="#modal-delete-{{$cli->id_clientes}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
                             </td>
                         </tr>
                         @include('cadastro.cliente.modal')

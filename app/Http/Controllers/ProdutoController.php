@@ -21,10 +21,9 @@ class ProdutoController extends Controller
         if ($request)
        {
            $query=trim($request->get('searchText'));
-           DB::table('produtos')->where('nome','LIKE','%'.$query.'%')
-           ->orderBy('tipo_produto');
-          $produtos = Produto::query()->orderBy('id_produtos','asc')->get();
-
+           $produtos=DB::table('produtos')->where('tipo_produto','LIKE','%'.$query.'%')
+         //  ->orderBy('tipo_produto')
+           ->orderBy('id_produtos','asc')->get();
          return view('cadastro.produto.index', ["produtos"=>$produtos,"searchText"=>$query]);
 
 
@@ -76,13 +75,17 @@ class ProdutoController extends Controller
 
 
     }
+
     public function destroy($id)
     {
 
+        Produto::find($id)->delete();
+        return redirect()->back();
 
-        $produto=Produto::findOrFail($id);
-        $produto->update();
-        return Redirect::to('cadastro/produto');
+//        $produto=Produto::findOrFail($id);
+//        $produto->update();
+//        return Redirect::to('cadastro/produto');
+
 
 //       $produto=Produto::find($id);
 //       $produto-> produto ->each(function (Produto $produto){

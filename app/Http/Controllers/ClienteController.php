@@ -86,9 +86,12 @@ class ClienteController extends Controller
     }
     public function destroy($id)
     {
-        $cliente=Cliente::findOrFail($id);
-        $cliente->update();
-        return Redirect::to('cadastro/cliente');
+
+        Cliente::find($id)->delete();
+        return redirect()->back();
+//        $cliente=Cliente::findOrFail($id);
+//        $cliente->update();
+//        return Redirect::to('cadastro/cliente');
 
     }
 

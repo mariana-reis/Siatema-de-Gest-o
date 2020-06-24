@@ -32,8 +32,7 @@
 
 
                                 <a href="{{URL::action('FuncionarioController@edit',$fun->id_funcionario)}}"><button class="btn btn-info">Editar</button></a>
-                                <a href="" data-target="#modal=delete-{{$fun->id_funcionario}}" data-toggle="modal"> <button class="btn btn-danger">Excluir</button></a>
-                            </td>
+                                <a href="" data-target="#modal-delete-{{$fun->id_funcionario}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>                            </td>
                         </tr>
 
                         @include('cadastro.funcionario.modal')

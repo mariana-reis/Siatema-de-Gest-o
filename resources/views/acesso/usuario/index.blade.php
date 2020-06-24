@@ -34,7 +34,7 @@
 
 
                             <a href="{{URL::action('UsuariosController@edit',$usu->id_usuarios)}}"><button class="btn btn-info">Editar</button></a>
-                            <a href="" data-target="#modal=delete-{{$usu->id_usuarios}}" data-toggle="modal"> <button class="btn btn-danger">Excluir</button></a>
+                            <a href="" data-target="#modal-delete-{{ $usu->id_usuarios}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
                         </td>
                     </tr>
                     @include('acesso.usuario.modal')

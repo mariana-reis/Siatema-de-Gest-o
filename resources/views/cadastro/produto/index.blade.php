@@ -30,7 +30,7 @@
 
 
                                 <a href="{{URL::action('ProdutoController@edit',$prod->id_produtos)}}"><button class="btn btn-info">Editar</button></a>
-                                <a href="" data-target="modal-delete-{{$prod->id_produtos}}" data-toggle="modal"> <button class="btn btn-danger">Excluir</button></a>
+                                <a href="" data-target="#modal-delete-{{$prod->id_produtos}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
                             </td>
                         </tr>
 

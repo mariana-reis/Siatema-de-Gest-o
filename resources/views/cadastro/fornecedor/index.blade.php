@@ -37,7 +37,7 @@
 
 
                             <a href="{{URL::action('FornecedorController@edit',$for->id_fornecedor)}}"><button class="btn btn-info">Editar</button></a>
-                            <a href="" data-target="#modal=delete-{{$for->id_fornecedor}}" data-toggle="modal"> <button class="btn btn-danger">Excluir</button></a>
+                            <a href="" data-target="#modal-delete-{{$for->id_fornecedor}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
                         </td>
                     </tr>
                     @include('cadastro.fornecedor.modal')

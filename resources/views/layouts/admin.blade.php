@@ -65,7 +65,7 @@
                                     <br>
                                     <small>Função: Gerente<br>
                                         Hora: 20:35<br>
-                                        Data: 08/06/2020</small>
+                                        Data: 23/06/2020</small>
                                 </p>
                             </li>
 
@@ -156,14 +156,32 @@
                 </li>
                 <li>
                     <a href="{{url('relatorio/grafico/grafico')}}">
-                        <i class="fa fa-plus-square"></i> <span>Relatorio Grafico</span>
+                        <i class="fa fa-plus-square"></i> <span>Relatório Gráfico</span>
                         <small class="label pull-right bg-red">exibir</small>
                     </a>
                 </li>
                 <li>
                     <a href="{{url('relatorio/vendasdiarias')}}">
-                        <i class="fa fa-plus-square"></i> <span>Relatorio Venda Diária</span>
+                        <i class="fa fa-plus-square"></i> <span>Relatório Venda Diária</span>
                         <small class="label pull-right bg-red">Exibir</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('pdf_produto')}}" target="_blank">
+                        <i class="fa fa-plus-square"></i> <span>Relatório Produtos </span>
+                        <small class="label pull-right bg-green">Gerar</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('pdf_caixa')}}" target="_blank">
+                        <i class="fa fa-plus-square"></i> <span>Relatório Caixa </span>
+                        <small class="label pull-right bg-green">Gerar</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('pdf_cliente')}}" target="_blank">
+                        <i class="fa fa-plus-square"></i> <span>Relatório Clientes </span>
+                        <small class="label pull-right bg-green">Gerar</small>
                     </a>
                 </li>
                 <li>
